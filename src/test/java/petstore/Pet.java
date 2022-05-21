@@ -44,4 +44,23 @@ public class Pet {
         ;
 
     }
+      @Test
+    public void consultarPet(){
+        String petId = "1203199112";
+        given()
+                .contentType("application/json")
+                .log().all()
+
+        .when()
+                .get(uri +"/"+ petId)
+                .then()
+                .log().all()
+                .statusCode(200)
+                .body("name",is ("Bradok"))
+                .body("status",is("available"))
+                .body("category.name",is("dog"))
+
+
+        ;
+    }
 }
