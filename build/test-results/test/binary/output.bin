@@ -1,0 +1,42 @@
+Request method:	GET
+<Request URI:	https://petstore.swagger.io/v2/pet/1203199112
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+2				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+%Date: Sat, 21 May 2022 05:46:26 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 1203199112,
+    "category": {
+        "id": 1,
+        "name": "dog"
+    },
+    "name": "Bradok",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+
+        {
+            "id": 2022,
+            "name": "sta"
+
+        }
+    ],
+    "status": "available"
+}
