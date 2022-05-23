@@ -1,5 +1,5 @@
-Request method:	GET
-<Request URI:	https://petstore.swagger.io/v2/pet/1203199112
+Request method:	POST
+1Request URI:	https://petstore.swagger.io/v2/pet
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -9,9 +9,29 @@
 2				Content-Type=application/json; charset=UTF-8
 Cookies:		<none>
 Multiparts:		<none>
-Body:			<none>
+Body:
+{
+    "id": 1203199112,
+    "category": {
+        "id": 1,
+        "name": "dog"
+    },
+    "name": "Bradok",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+
+        {
+            "id": 2022,
+            "name": "sta"
+
+        }
+    ],
+    "status": "available"
+}
 HTTP/1.1 200 OK
-%Date: Sat, 21 May 2022 05:46:26 GMT
+%Date: Sat, 21 May 2022 12:37:52 GMT
  Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive

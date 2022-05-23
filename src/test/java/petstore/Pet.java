@@ -22,7 +22,7 @@ public class Pet {
         return new String(Files.readAllBytes(Paths.get(caminhoJson)));
     }
     // Incluir - Create - Post
-    @Test // identifica o métudo ou função  como um teste para o TestNG
+    @Test (priority = 1)// identifica o métudo ou função  como um teste para o TestNG
     public void incluirPet() throws IOException {
         String jsonBody = lerJson("db/pet1.json");
 
@@ -44,7 +44,7 @@ public class Pet {
         ;
 
     }
-      @Test
+      @Test (priority = 2)
     public void consultarPet(){
         String petId = "1203199112";
         given()
@@ -53,12 +53,14 @@ public class Pet {
 
         .when()
                 .get(uri +"/"+ petId)
-                .then()
+
+        .then()
                 .log().all()
                 .statusCode(200)
                 .body("name",is ("Bradok"))
                 .body("status",is("available"))
                 .body("category.name",is("dog"))
+
 
 
         ;
