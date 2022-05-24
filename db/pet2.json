@@ -1,0 +1,18 @@
+{
+  "id": 1203199112,
+  "category": {
+    "id": 1,
+    "name": "AX2345LORT1"
+  },
+  "name": "Bradok",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 20220812,
+      "name": "data"
+    }
+  ],
+  "status": "sold"
+}
