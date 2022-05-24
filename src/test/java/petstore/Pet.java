@@ -39,17 +39,20 @@ public class Pet {
                 .statusCode(200)
                 .body("name",is ("Bradok"))
                 .body("status",is("available"))
-                .body("category.name",is("dog"))
-                .body("tags.name",contains("sta"))
+                .body("category.name",is("AX2345LORT1"))
+                .body("tags.name",contains("data"))
         ;
 
     }
       @Test (priority = 2)
     public void consultarPet(){
         String petId = "1203199112";
+
+        String token =
         given()
                 .contentType("application/json")
                 .log().all()
+               // .body(jsonBody)
 
         .when()
                 .get(uri +"/"+ petId)
@@ -59,10 +62,11 @@ public class Pet {
                 .statusCode(200)
                 .body("name",is ("Bradok"))
                 .body("status",is("available"))
-                .body("category.name",is("dog"))
-
-
-
+                .body("category.name",is("AX2345LORT1"))
+                .extract()
+                .path("category.name")
+          ;
+          System.out.println("O token é " + token)
         ;
     }
 }
